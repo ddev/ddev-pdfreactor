@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  pdfreactor:
+    container_name: ddev-${DDEV_SITENAME}-pdfreactor
+    image: realobjects/pdfreactor
+    # These labels ensure this service is discoverable by ddev.
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+    - ".:/mnt/ddev_config"
+    - "./pdfreactor:/ro/config"
