@@ -24,9 +24,7 @@ class PdfReactorCommand extends AbstractCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $pdf = Processor::getInstance()->startPdfGeneration(75);
-
-        if ($pdf) {
+        if (Processor::getInstance()->preparePdfGeneration(75, ['disableBackgroundExecution' => true])) {
             return 0;
         }
 
