@@ -7,7 +7,7 @@ use Pimcore\Web2Print\Processor;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ExportPdfReactorCommand extends AbstractCommand
+class PdfReactorCommand extends AbstractCommand
 {
     protected function configure(): void
     {
