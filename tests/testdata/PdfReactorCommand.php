@@ -29,7 +29,7 @@ class PdfReactorCommand extends AbstractCommand
             return 0;
         }
 
-        $output->writeln('<error>Pimcore can not generate a PDF</error>')
+        $output->writeln('<error>Pimcore can not generate a PDF</error>');
         return 1;
     }
 }
