@@ -1,7 +1,7 @@
 setup() {
   set -eu -o pipefail
   export DIR="$( cd "$( dirname "$BATS_TEST_FILENAME" )" >/dev/null 2>&1 && pwd )/.."
-  export TESTDIR=~/tmp/testpdfreactor
+  export TESTDIR=~/tmp/test-pdfreactor
   mkdir -p $TESTDIR
   export PROJNAME=test-pdfreactor
   export DDEV_NON_INTERACTIVE=true
@@ -34,7 +34,7 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get drud/ddev-addon-template with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  echo "# ddev get blankse/pdfreactor with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
   ddev get blankse/pdfreactor
   ddev restart
   ddev php bin/console app:pdf-reactor
