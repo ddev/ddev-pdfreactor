@@ -11,7 +11,6 @@ setup() {
   echo "# Setting up Pimcore project via composer ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
   ddev composer create -y -n pimcore/demo
   ddev exec php vendor/pimcore/pimcore/bin/pimcore-install --admin-username admin --admin-password demo --mysql-host-socket db --mysql-username db --mysql-password db --mysql-database db --no-interaction
-  cp ${DIR}/tests/testdata/web2print.php var/config/web2print.php
   cp ${DIR}/tests/testdata/PdfReactorCommand.php src/Command/PdfReactorCommand.php
 }
 
