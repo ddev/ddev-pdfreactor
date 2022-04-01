@@ -74,13 +74,13 @@ ddev restart
 
     4. Set the config and click the save button
 
-    | Setting  | Value      |
-    |----------|------------|
-    | Tool     | PDFreactor |
-    | Protocol | http       |
-    | Server   | pdfreactor |
-    | Port     | 9423       |
-    | BaseURL  | http://web |
+    | Setting  | Value                         |
+    |----------|-------------------------------|
+    | Tool     | PDFreactor                    |
+    | Protocol | http                          |
+    | Server   | pdfreactor                    |
+    | Port     | 9423                          |
+    | BaseURL  | http://pimcore-demo.ddev.site |
 
 4. Test a Print document
    1. Execute Maintenance Worker:
