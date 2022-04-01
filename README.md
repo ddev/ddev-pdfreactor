@@ -18,4 +18,8 @@ This pdfreactor recipe for [ddev](https://ddev.readthedocs.io) installs a [`.dde
 * The PDFreactor instance will listen on TCP port 9423 (the PDFreactor default).
 * Configure your application to access PDFreactor on the host:port `pdfreactor:9423`.
 
+## License
+
+ddev-pdfreactor is distributed under the [Apache 2.0 license](LICENSE).
+
 **Contributed and maintained by [@blankse](https://github.com/blankse)**
