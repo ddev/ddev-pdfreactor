@@ -10,3 +10,5 @@ services:
     volumes:
     - ".:/mnt/ddev_config"
     - "./pdfreactor:/ro/config"
+    external_links:
+    - "ddev-router:${DDEV_SITENAME}.${DDEV_TLD}"
