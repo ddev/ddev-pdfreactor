@@ -90,6 +90,10 @@ ddev restart
    3. Go to the demo Print catalog (/print/Demo-Catalog)
    4. Click to "Generate PDF" button
 
+## Currently no ARM64 Docker image available
+
+PDFreactor currently do not provide ARM64 images for the Docker image. They are planning to support this with the release of the next major version of PDFreactor (PDFreactor 12).
+
 ## License
 
 ddev-pdfreactor is distributed under the [Apache 2.0 license](LICENSE).
