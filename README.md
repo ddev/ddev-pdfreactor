@@ -1,12 +1,12 @@
-[![tests](https://github.com/blankse/ddev-pdfreactor/actions/workflows/tests.yml/badge.svg)](https://github.com/blankse/ddev-pdfreactor/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2022.svg)
+[![tests](https://github.com/drud/ddev-pdfreactor/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-pdfreactor/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2022.svg)
 
 ## What is ddev-pdfreactor?
 
-This repository allows you to quickly install [PDFreactor](https://www.pdfreactor.com/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get blankse/ddev-pdfreactor`.
+This repository allows you to quickly install [PDFreactor](https://www.pdfreactor.com/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get drud/ddev-pdfreactor`.
 
 ## Installation
 
-1. `ddev get blankse/ddev-pdfreactor`
+1. `ddev get drud/ddev-pdfreactor`
 2. `ddev restart`
 
 ## Explanation
@@ -62,7 +62,7 @@ ddev exec php vendor/pimcore/pimcore/bin/pimcore-install --admin-username admin 
 ```
 2. Install ddev-pdfreactor Addon
 ```
-ddev get blankse/ddev-pdfreactor
+ddev get drud/ddev-pdfreactor
 ddev restart
 ```
 3. Config

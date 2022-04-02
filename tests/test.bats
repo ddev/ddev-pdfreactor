@@ -33,8 +33,8 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get blankse/ddev-pdfreactor with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get blankse/ddev-pdfreactor
+  echo "# ddev get drud/ddev-pdfreactor with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev get drud/ddev-pdfreactor
   ddev restart
   ddev php bin/console app:pdf-reactor
 }
