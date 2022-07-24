@@ -1,0 +1,90 @@
+@page {
+    margin: 1.5cm;
+    padding-top: 5mm;
+    counter-increment: page;
+
+    @bottom-center {
+        position: absolute;
+        
+        width: 100%;
+        height: 7.5mm;
+        bottom: 5mm;
+        
+        text-align: center;
+        font: 12px Arial, Helvetica, sans-serif;
+        color: white;
+        
+        background-color: #003399;
+    }
+    @bottom-right {
+        content: counter(page);
+        
+        position: absolute;
+        
+        height: 7.5mm;
+        bottom: 5mm;
+        
+        text-align: center;
+        font: 12px Arial, Helvetica, sans-serif;
+        color: white;
+    }
+    @top-center {
+        margin-top: 5mm;
+        margin-left: -15mm;
+        margin-right: -15mm;
+        padding-right: 10mm;
+        
+        text-align: right;
+        font: 18px Arial, Helvetica, sans-serif;
+        color: white;
+
+        background-color: #003399;
+    }
+}
+html {
+        font-family: Sans, 'RealObjects core sans-serif', Arial, sans-serif;
+        color: #222222;
+}
+body {
+    margin: 0.6cm;
+}
+p {
+    color: #666666;
+}
+pre {
+    border: 1px solid #E1E1E1;
+    background-color: #f5f5f5;
+    padding: 0.2cm 0.4cm 0.2cm 0.4cm;
+    font-family: RealObjects core monospace, Courier New, monospace;
+}
+pre span {
+    color: #0000FF;
+    font-weight: bold;
+}
+span.c0000FF {
+    color: #0000FF;
+}
+span.cFF0000 {
+    color: #FF0000;
+}
+span.c8000FF {
+    color: #8000FF;
+}
+span.c008000 {
+    color: #008000;
+}
+span.c808080 {
+    color: #808080;
+}
+span.c000080 {
+    color: #000080;
+}
+span.c808000 {
+    color: #808000;
+}
+span.cFF8000 {
+    color: #FF8000;
+}
+div.block {
+    page-break-inside: avoid;
+}
