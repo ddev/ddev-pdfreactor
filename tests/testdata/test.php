@@ -36,4 +36,10 @@ $config = array(
     )
 );
 
-$pdfReactor->convertAsBinary($config);
+$result = $pdfReactor->convertAsBinary($config);
+
+if (preg_match('/^%PDF-/', $result)) {
+    echo 'PDF generation was successful';
+} else {
+    throw new \Exception('Generated PDF file is invalid');
+}
