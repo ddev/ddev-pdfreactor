@@ -7,11 +7,10 @@ setup() {
   export DDEV_NON_INTERACTIVE=true
   ddev delete -Oy ${PROJNAME} || true
   cd "${TESTDIR}"
-  ddev config --project-name=${PROJNAME} --project-type=php --docroot=public --webserver-type=apache-fpm --create-docroot --php-version=8.0 --database=mariadb:10.5
-  echo "# Setting up Pimcore project via composer ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev composer create -y -n pimcore/demo
-  ddev exec php vendor/pimcore/pimcore/bin/pimcore-install --admin-username admin --admin-password demo --mysql-host-socket db --mysql-username db --mysql-password db --mysql-database db --no-interaction
-  cp ${DIR}/tests/testdata/PdfReactorCommand.php src/Command/PdfReactorCommand.php
+  echo "# Setting up project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  cp -R ${DIR}/tests/testdata/* .
+  ddev config --project-name=${PROJNAME} --project-type=php
+  ddev start
 }
 
 teardown() {
@@ -27,7 +26,7 @@ teardown() {
   echo "# ddev get ${DIR} with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
   ddev get ${DIR}
   ddev restart
-  ddev php bin/console app:pdf-reactor
+  ddev php test.php
 }
 
 @test "install from release" {
@@ -36,5 +35,5 @@ teardown() {
   echo "# ddev get drud/ddev-pdfreactor with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
   ddev get drud/ddev-pdfreactor
   ddev restart
-  ddev php bin/console app:pdf-reactor
+  ddev php test.php
 }
