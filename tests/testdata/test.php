@@ -4,6 +4,7 @@ require_once('lib/PDFreactor.class.php');
 
 use com\realobjects\pdfreactor\webservice\client\PDFreactor as PDFreactor;
 use com\realobjects\pdfreactor\webservice\client\LogLevel as LogLevel;
+use com\realobjects\pdfreactor\webservice\client\UnreachableServiceException;
 use com\realobjects\pdfreactor\webservice\client\ViewerPreferences as ViewerPreferences;
 
 $content = file_get_contents('resources/content.html');
@@ -36,7 +37,15 @@ $config = [
     ],
 ];
 
-$result = $pdfReactor->convertAsBinary($config);
+for ($i = 0; $i < 5; $i++) {
+    try {
+        $result = $pdfReactor->convertAsBinary($config);
+        break;
+    } catch (UnreachableServiceException $e) {
+        echo 'PDF Reactor Server unreachable. Retry in 10 seconds.' . "\n";
+        sleep(10);
+    }
+}
 
 if (preg_match('/^%PDF-/', $result)) {
     echo 'PDF generation was successful' . "\n";
