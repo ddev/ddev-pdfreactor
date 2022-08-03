@@ -13,3 +13,5 @@ services:
     - "./pdfreactor:/ro/config"
     external_links:
     - "ddev-router:${DDEV_SITENAME}.${DDEV_TLD}"
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail -s localhost:9423"]
