@@ -1,12 +1,12 @@
-[![tests](https://github.com/drud/ddev-pdfreactor/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-pdfreactor/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
+[![tests](https://github.com/ddev/ddev-pdfreactor/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-pdfreactor/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
 
 ## What is ddev-pdfreactor?
 
-This repository allows you to quickly install [PDFreactor](https://www.pdfreactor.com/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get drud/ddev-pdfreactor`.
+This repository allows you to quickly install [PDFreactor](https://www.pdfreactor.com/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get ddev/ddev-pdfreactor`.
 
 ## Installation
 
-1. `ddev get drud/ddev-pdfreactor`
+1. `ddev get ddev/ddev-pdfreactor`
 2. `ddev restart`
 
 ## Explanation
@@ -23,7 +23,7 @@ This pdfreactor recipe for [ddev](https://ddev.readthedocs.io) installs a [`.dde
 ```php
 <?php
 // Include PDFreactor class
-// You can download the PDFreactor Web Service PHP client from: 
+// You can download the PDFreactor Web Service PHP client from:
 // http://www.pdfreactor.com/download/get/?product=pdfreactor&type=webservice_clients&jre=false
 require_once('PDFreactor.class.php');
 use com\realobjects\pdfreactor\webservice\client\PDFreactor;
@@ -36,7 +36,7 @@ $config = [
     'document'=> 'http://www.pdfreactor.com/product/samples/textbook/textbook.html',
 ];
 
-// Render document and save result to $result 
+// Render document and save result to $result
 $result = null;
 try {
     $result = $pdfReactor->convertAsBinary($config);
@@ -62,7 +62,7 @@ ddev exec php vendor/pimcore/pimcore/bin/pimcore-install --admin-username admin 
 ```
 2. Install ddev-pdfreactor Addon
 ```
-ddev get drud/ddev-pdfreactor
+ddev get ddev/ddev-pdfreactor
 ddev restart
 ```
 3. Config
@@ -84,7 +84,7 @@ ddev restart
 
 4. Test a Print document
    1. Execute Maintenance Worker:
-   
+
       `ddev php bin/console messenger:consume pimcore_core pimcore_maintenance`
 
    3. Go to the demo Print catalog (/print/Demo-Catalog)
