@@ -2,7 +2,7 @@
 
 ## What is ddev-pdfreactor?
 
-This repository allows you to quickly install [PDFreactor](https://www.pdfreactor.com/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get ddev/ddev-pdfreactor`.
+This repository allows you to quickly install [PDFreactor](https://www.pdfreactor.com/) into a [DDEV](https://ddev.readthedocs.io) project using just `ddev get ddev/ddev-pdfreactor`.
 
 ## Installation
 
@@ -11,7 +11,7 @@ This repository allows you to quickly install [PDFreactor](https://www.pdfreacto
 
 ## Explanation
 
-This pdfreactor recipe for [ddev](https://ddev.readthedocs.io) installs a [`.ddev/docker-compose.pdfreactor.yaml`](docker-compose.pdfreactor.yaml) using the [`realobjects/pdfreactor`](https://hub.docker.com/r/realobjects/pdfreactor/) docker image.
+This PDFreactor recipe for [DDEV](https://ddev.readthedocs.io) installs a [`.ddev/docker-compose.pdfreactor.yaml`](docker-compose.pdfreactor.yaml) using the [`realobjects/pdfreactor`](https://hub.docker.com/r/realobjects/pdfreactor/) Docker image.
 
 ## Interacting with PDFreactor
 
@@ -48,7 +48,7 @@ try {
 }
 ```
 
-More infos: [https://www.pdfreactor.com/php/](https://www.pdfreactor.com/php/)
+More info: [https://www.pdfreactor.com/php/](https://www.pdfreactor.com/php/)
 
 ## Example to use this PDFreactor service with Pimcore
 
