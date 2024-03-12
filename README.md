@@ -50,13 +50,13 @@ try {
 
 More info: [https://www.pdfreactor.com/php/](https://www.pdfreactor.com/php/)
 
-## Example to use this PDFreactor service with Pimcore
+## Example: Use PDFreactor service with Pimcore
 
 1. Install Pimcore demo
 ```
 mkdir -p pimcore-demo
 cd pimcore-demo
-ddev config --project-type=php --docroot=public --webserver-type=apache-fpm --create-docroot --php-version=8.0 --database=mariadb:10.5
+ddev config --project-type=php --docroot=public --webserver-type=apache-fpm --php-version=8.0 --database=mariadb:10.5
 ddev composer create -y -n pimcore/demo
 ddev exec php vendor/pimcore/pimcore/bin/pimcore-install --admin-username admin --admin-password demo --mysql-host-socket db --mysql-username db --mysql-password db --mysql-database db --no-interaction
 ```
@@ -89,10 +89,6 @@ ddev restart
 
    3. Go to the demo Print catalog (/print/Demo-Catalog)
    4. Click to "Generate PDF" button
-
-## Currently no ARM64 Docker image available
-
-PDFreactor currently do not provide ARM64 images for the Docker image. They are planning to support this with the release of the next major version of PDFreactor (PDFreactor 12).
 
 ## License
 
